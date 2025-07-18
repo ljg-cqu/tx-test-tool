@@ -52,7 +52,7 @@ pub enum CliCommand {
 		#[clap(subcommand)]
 		scenario: ScenarioType,
 		/// Use legacy backend
-		#[clap(long, default_value_t = false)]
+		#[clap(long, default_value_t = true)]
 		use_legacy_backend: bool,
 	},
 	/// Check nonce for given account.

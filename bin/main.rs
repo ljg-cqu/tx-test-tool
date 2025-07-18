@@ -129,7 +129,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 						desc,
 						generate_ecdsa_keypair,
 						None,
-						false,
+						true,
 					)
 					.await;
 					let account =
@@ -148,7 +148,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 						desc,
 						generate_sr25519_keypair,
 						None,
-						false,
+						true,
 					)
 					.await;
 					let account =
