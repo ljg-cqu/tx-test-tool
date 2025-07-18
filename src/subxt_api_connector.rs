@@ -13,7 +13,7 @@ const MAX_ATTEMPTS: usize = 10;
 const RETRY_DELAY: Duration = Duration::from_secs(1);
 
 /// Connect to a RPC node.
-pub(crate) async fn connect<C: subxt::Config>(
+pub async fn connect<C: subxt::Config>(
 	url: &str,
 	use_legacy_backend: bool,
 ) -> Result<OnlineClient<C>, Box<dyn Error>> {
