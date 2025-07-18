@@ -40,7 +40,7 @@ Send a single transaction from an account with a specified nonce:
 txtt tx one-shot --account alice --nonce 1
 ```
 
-This command sends one transaction from the account `alice` with a nonce of 1 to the default Substrate chain using the default WebSocket endpoint (`ws://127.0.0.1:9933`) and listens for transaction status events.
+This command sends one transaction from the account `alice` with a nonce of 1 to the default Substrate chain using the default WebSocket endpoint (`ws://127.0.0.1:9944`) and listens for transaction status events.
 
 ##### Sending Transactions with Automatic Nonce
 
@@ -98,7 +98,7 @@ txtt tx --unwatched --block-monitor from-single-account --acount alice --count 1
 Monitor blocks on the blockchain to track number of extrinsics (useful for manual testing):
 
 ```
-txtt block-monitor --ws ws://127.0.0.1:9933
+txtt block-monitor --ws ws://127.0.0.1:9944
 ```
 
 ##### Log Management

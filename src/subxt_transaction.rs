@@ -132,13 +132,13 @@ where
 {
 	pub async fn new() -> Self {
 		Self {
-			api: crate::subxt_api_connector::connect("ws://127.0.0.1:9933", false)
+			api: crate::subxt_api_connector::connect("ws://127.0.0.1:9944", false)
 				.await
 				.expect(EXPECT_CONNECT),
 			from_accounts: Default::default(),
 			to_accounts: Default::default(),
 			nonces: Default::default(),
-			rpc_client: RpcClient::from_url("ws://127.0.0.1:9933").await.expect(EXPECT_CONNECT),
+			rpc_client: RpcClient::from_url("ws://127.0.0.1:9944").await.expect(EXPECT_CONNECT),
 			current_pending_extrinsics: Arc::new(None.into()),
 			block_monitor: None,
 		}

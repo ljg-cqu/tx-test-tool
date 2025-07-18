@@ -22,7 +22,7 @@ pub enum CliCommand {
 		#[clap(long, default_value = "sub")]
 		chain: ChainType,
 		/// The RPC endpoint of the node to be used.
-		#[clap(long, default_value = "ws://127.0.0.1:9933")]
+		#[clap(long, default_value = "ws://127.0.0.1:9944")]
 		ws: String,
 		/// Send transaction with event listener (submit_and_watch).
 		#[clap(long)]
@@ -61,7 +61,7 @@ pub enum CliCommand {
 		#[clap(long, default_value = "sub")]
 		chain: ChainType,
 		/// The RPC endpoint of the node to be used.
-		#[clap(long, default_value = "ws://127.0.0.1:9933")]
+		#[clap(long, default_value = "ws://127.0.0.1:9944")]
 		ws: String,
 		/// Account identifier to be used. It can be keyring account (alice, bob,...) or index of
 		/// pre-funded account index used for derivation.
@@ -71,7 +71,7 @@ pub enum CliCommand {
 	/// Download and display the metadata.
 	Metadata {
 		/// The RPC endpoint of the node to be used.
-		#[clap(long, default_value = "ws://127.0.0.1:9933")]
+		#[clap(long, default_value = "ws://127.0.0.1:9944")]
 		ws: String,
 	},
 	/// Execute the stand alone block monitor and print some transactions stats.
@@ -80,7 +80,7 @@ pub enum CliCommand {
 		#[clap(long, default_value = "sub")]
 		chain: ChainType,
 		/// The RPC endpoint of the node to be used.
-		#[clap(long, default_value = "ws://127.0.0.1:9933")]
+		#[clap(long, default_value = "ws://127.0.0.1:9944")]
 		ws: String,
 		#[clap(long, default_value = "all")]
 		display: BlockMonitorDisplayOptions,

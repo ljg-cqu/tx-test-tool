@@ -522,10 +522,10 @@ mod tests {
 	async fn oh_god2() {
 		init_logger();
 
-		// let api = OnlineClient::<EthRuntimeConfig>::from_insecure_url("ws://127.0.0.1:9933")
+		// let api = OnlineClient::<EthRuntimeConfig>::from_insecure_url("ws://127.0.0.1:9944")
 		//     .await
 		//     .unwrap();
-		let api = subxt_api_connector::connect("ws://127.0.0.1:9933", false).await.unwrap();
+		let api = subxt_api_connector::connect("ws://127.0.0.1:9944", false).await.unwrap();
 
 		let rpc = EthTransactionsSink::new().await;
 		let mut transactions = Vec::new();

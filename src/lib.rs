@@ -17,7 +17,7 @@
 //! ```rust,ignore
 //!     // Shared Params
 //!     let send_threshold = 20_000;
-//!     let ws = "ws://127.0.0.1:9933";
+//!     let ws = "ws://127.0.0.1:9944";
 //!     let block_monitor = false;
 //!     let watched_txs = true;
 //!
