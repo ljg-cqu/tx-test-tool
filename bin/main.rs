@@ -74,6 +74,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 					.with_installed_ctrlc_stop_hook(true)
 					.with_legacy_backend(*use_legacy_backend)
 					.with_tip(*tip);
+				if let Some(log_file) = log_file {
+					scenario_builder = scenario_builder.with_log_file_name_prefix(log_file.clone());
+				}
 
 				scenario_builder = populate_scenario_builder!(scenario_builder, scenario);
 
@@ -98,6 +101,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 					.with_installed_ctrlc_stop_hook(true)
 					.with_legacy_backend(*use_legacy_backend)
 					.with_tip(*tip);
+				if let Some(log_file) = log_file {
+					scenario_builder = scenario_builder.with_log_file_name_prefix(log_file.clone());
+				}
 
 				scenario_builder = populate_scenario_builder!(scenario_builder, scenario);
 
