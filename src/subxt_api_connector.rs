@@ -53,3 +53,17 @@ pub async fn connect<C: subxt::Config>(
 	info!("{}", err);
 	Err(err.into())
 }
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+	use subxt::PolkadotConfig;
+
+	#[tokio::test]
+	async fn test_connect_local_node() {
+		let url = "ws://127.0.0.1:9944";
+		let use_legacy_backend = true;
+		let result = connect::<PolkadotConfig>(url, use_legacy_backend).await;
+		assert!(result.is_ok(), "Failed to connect to local node: {:?}", result.err());
+	}
+}
